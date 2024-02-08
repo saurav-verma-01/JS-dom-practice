@@ -75,3 +75,25 @@ addBtn.addEventListener("click", () => {
 removeBtn.addEventListener("click", () => {
   ul.removeChild(li);
 });
+
+// Challenge 5
+
+const start = document.getElementById("start");
+const stop = document.getElementById("stop");
+const counter = document.querySelector(".counter-heading");
+
+let count = 0;
+let interval;
+
+start.addEventListener("click", () => {
+  interval = setInterval(() => {
+    counter.textContent = count;
+    count++;
+  }, 600);
+});
+
+stop.addEventListener("click", () => {
+  clearInterval(interval);
+  count = "0";
+  counter.textContent = count;
+});
