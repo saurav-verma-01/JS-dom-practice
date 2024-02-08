@@ -33,3 +33,22 @@ const imgSwapper = () => {
 };
 
 btn2.addEventListener("click", imgSwapper);
+
+// Challenge 3
+
+const inputs = document.querySelectorAll("input");
+const submitBtn = document.querySelector(".submit");
+const errorHeader = document.querySelector(".form-error");
+
+submitBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  for (let i = 0; i <= inputs.length; i++) {
+    if (inputs[i].value.trim() === "") {
+      errorHeader.textContent =
+        "Error, Please check if all fields are filled appropriately";
+      break;
+    } else {
+      errorHeader.textContent = "";
+    }
+  }
+});
