@@ -52,3 +52,26 @@ submitBtn.addEventListener("click", (e) => {
     }
   }
 });
+
+// Challenge 4
+
+const ul = document.querySelector(".list");
+const itemInp = document.querySelector(".item-input");
+const addBtn = document.querySelector(".add-btn");
+const removeBtn = document.querySelector(".remove-btn");
+
+let li;
+
+addBtn.addEventListener("click", () => {
+  if (itemInp.value.trim() === "") return;
+  else {
+    li = document.createElement("li");
+    li.textContent = itemInp.value.trim();
+    ul.appendChild(li);
+    itemInp.value = "";
+  }
+});
+
+removeBtn.addEventListener("click", () => {
+  ul.removeChild(li);
+});

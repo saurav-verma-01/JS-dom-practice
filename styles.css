@@ -90,3 +90,25 @@ button:is(:hover, :focus-visible) {
   width: max-content;
   transform: translateX(-50%);
 }
+
+/* Challenge 4 */
+
+.app-4 {
+  padding: 4rem 2rem;
+  background-color: rgb(248, 219, 224);
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app-4 li {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: rgb(57, 0, 52);
+}
+.app-4 input {
+  padding: 0.5rem 2rem;
+}
+.app-4 button {
+  background-color: rgb(158, 3, 158);
+}
